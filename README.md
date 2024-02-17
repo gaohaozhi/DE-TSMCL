@@ -37,22 +37,4 @@ To train and evaluate DETSMCL on a dataset, run the following command:
 ```train & evaluate
 python train.py <dataset_name> <run_name> --loader <loader> --batch-size <batch_size> --repr-dims <repr_dims> --gpu <gpu> --eval
 ```
-The detailed descriptions about the arguments are as following:
-| Parameter name | Description of parameter |
-| --- | --- |
-| dataset_name | The dataset name |
-| run_name | The folder name used to save model, output and evaluation metrics. This can be set to any word |
-| loader | The data loader used to load the experimental data. This can be set to `forecast_csv`, `forecast_csv_univar`|
-| batch_size | The batch size (defaults to 4) |
-| repr_dims | The representation dimensions (defaults to 320) |
-| gpu | The gpu no. used for training and inference (defaults to 0) |
-| eval | Whether to perform evaluation after training |
-| momentum | The momentum update value (defaults to 0.999) |
-
-(For descriptions of more arguments, run `python train.py -h`.)
-
-After training and evaluation, the trained encoder, output and evaluation metrics can be found in `training/DatasetName__RunName_Date_Time/`. 
-
-**Scripts:** The scripts for reproduction are provided in `scripts/` folder.
-
 
